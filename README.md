@@ -45,6 +45,7 @@ export PYTHONPATH=$PYTHONPATH:/usr/local/lib
 * [link1](https://cognitivexr.at/blog/2021/07/29/installing-pyrealsense2-nvidia-jetson-xavier-nx.html)
 * [link2](https://jstar0525.tistory.com/97)
 * [link3](https://github.com/IntelRealSense/librealsense/issues/7722)
+* [link4](https://github.com/35selim/RealSense-Jetson)
 
 ## Possible Errors
 Could NOT find `OpenSSL`, try to set the path to OpenSSL root folder in the system variable OPENSSL_ROOT_DIR (missing: OPENSSL_CRYPTO_LIBRARY OPENSSL_INCLUDE_DIR)

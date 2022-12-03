@@ -34,7 +34,12 @@ Then
 ```
 make -j4
 sudo make install
-PYTHONPATH=$PYTHONPATH:/usr/local/lib
+```
+Add `PATH`, make sure correct python version is named.
+```
+export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.8/pyrealsense2
+export PYTHONPATH=/usr/local/lib/python3.8/pyrealsense2
+export PYTHONPATH=$PYTHONPATH:/usr/local/lib
 ```
 
 * [link1](https://cognitivexr.at/blog/2021/07/29/installing-pyrealsense2-nvidia-jetson-xavier-nx.html)

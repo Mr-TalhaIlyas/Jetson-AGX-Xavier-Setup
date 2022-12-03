@@ -22,10 +22,33 @@ torch.cuda.is_available()
 If you get path error then follow steps [here](https://javachipd.medium.com/setting-up-pytorch-on-nvidia-jetson-boards-f7c297f56747) or [nano](https://qengineering.eu/install-pytorch-on-jetson-nano.html)
 
 
-4. Connecting Intel's RealSense Depth Camera
+# Connecting Intel's RealSense Depth Camera
+```
+$ git clone https://github.com/IntelRealSense/librealsense.git
+$ cd ./librealsense
+$ mkdir build
+$ cd build
+$ make -DFORCE_RSUSB_BACKEND=ON -DBUILD_PYTHON_BINDINGS:bool=true -DPYTHON_EXECUTABLE=/usr/bin/python3 -DCMAKE_BUILD_TYPE=release -DBUILD_EXAMPLES=true -DBUILD_GRAPHICAL_EXAMPLES=true -DBUILD_WITH_CUDA:bool=true ..
+```
+Then
+```
+make -j4
+sudo make install
+PYTHONPATH=$PYTHONPATH:/usr/local/lib
+```
+
 * [link1](https://cognitivexr.at/blog/2021/07/29/installing-pyrealsense2-nvidia-jetson-xavier-nx.html)
 * [link2](https://jstar0525.tistory.com/97)
 
+## Possible Errors
+Could NOT find `OpenSSL`, try to set the path to OpenSSL root folder in the system variable OPENSSL_ROOT_DIR (missing: OPENSSL_CRYPTO_LIBRARY OPENSSL_INCLUDE_DIR)
+```
+$ sudo apt-get install libssl-dev
+```
+The `Xinerama` headers were not found
+```
+$ sudo apt-get install xorg-dev libglu1-mesa-dev
+```
 if you get an error related to `RandR` then install followin packeage first.
 
 ```

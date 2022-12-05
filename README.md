@@ -41,7 +41,12 @@ export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.8/pyrealsense2
 export PYTHONPATH=/usr/local/lib/python3.8/pyrealsense2
 export PYTHONPATH=$PYTHONPATH:/usr/local/lib
 ```
-
+Python Binding
+```
+sudo mkdir /usr/local/lib/python3.8/pyrealsense2
+sudo ln -s ~/librealsense/build/wrappers/python/pybackend2.cpython-38-aarch64-linux-gnu.so /usr/local/lib/python3.8/pyrealsense2/
+sudo ln -s ~/librealsense/build/wrappers/python/pyrealsense2.cpython-38-aarch64-linux-gnu.so /usr/local/lib/python3.8/pyrealsense2/
+```
 * [link1](https://cognitivexr.at/blog/2021/07/29/installing-pyrealsense2-nvidia-jetson-xavier-nx.html)
 * [link2](https://jstar0525.tistory.com/97)
 * [link3](https://github.com/IntelRealSense/librealsense/issues/7722)
